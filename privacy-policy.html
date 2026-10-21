@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Kordela</title>
+<meta name="description" content="How Kordela: Connect the Dots Game handles your data. No account, no ads, no tracking. Your progress stays on your device, with an anonymous online backup.">
+<link rel="canonical" href="https://alperenciftlikci.github.io/kordela/privacy-policy.html">
+<meta name="theme-color" content="#485789">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<style>
+:root{
+  --map-hi:#6073B3;--map-lo:#485789;--navy:#0F1730;--ink:#0A1022;
+  --saffron:#EBA415;--gold:#F1D27A;
+  --bg:#F4F5FA;--surface:#FFFFFF;--text:#0F1730;--muted:#4A5372;--line:rgba(15,23,48,.12);
+  --link:#3B4A86;--tag-bg:rgba(235,164,21,.16);--tag-text:#7A5200;
+  --shadow:0 1px 2px rgba(15,23,48,.05),0 10px 30px rgba(15,23,48,.08);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0B1124;--surface:#141D38;--text:#EEF1F8;--muted:#AEB6CC;--line:rgba(255,255,255,.12);
+    --link:#F1D27A;--tag-bg:rgba(235,164,21,.13);--tag-text:#F1D27A;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.3)}
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);
+  font:400 1.0625rem/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+img,svg{display:block;max-width:100%;height:auto}
+a{color:var(--link);text-underline-offset:.18em;overflow-wrap:anywhere}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--saffron);outline-offset:3px;border-radius:6px}
+h1,h2,h3{margin:0;line-height:1.2;letter-spacing:-.015em}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:12px;top:-80px;z-index:10;padding:10px 16px;border-radius:10px;
+  background:var(--ink);color:#fff;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+
+/* Top bar (shared) */
+.pagehead{background:linear-gradient(180deg,var(--map-hi) 0%,var(--map-lo) 100%);color:#fff}
+.topbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;padding:16px 0}
+.brand{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:750;font-size:1.25rem;letter-spacing:-.01em}
+.brand img{width:36px;height:36px;border-radius:9px}
+.nav{display:flex;gap:4px;margin:0;padding:0;list-style:none}
+.nav a{display:inline-block;padding:8px 12px;border-radius:999px;color:#fff;font-weight:600;text-decoration:none}
+.nav a:hover{background:rgba(10,16,34,.28)}
+.nav a[aria-current="page"]{background:rgba(10,16,34,.34)}
+@media (max-width:380px){.wrap{padding:0 16px}.brand{gap:8px;font-size:1.15rem}.brand img{width:32px;height:32px;border-radius:8px}.nav a{padding:8px 10px}}
+@media (max-width:340px){.brand{font-size:1.05rem}.nav a{padding:6px 8px;font-size:.95rem}}
+
+/* Document */
+.doc{padding:44px 0 72px}
+.doc .wrap{max-width:800px}
+.doc h1{font-size:clamp(2rem,5vw,2.8rem);letter-spacing:-.025em}
+.meta{margin:10px 0 0;color:var(--muted)}
+.doc h2{font-size:1.45rem;margin:52px 0 14px;scroll-margin-top:20px}
+.doc h3{font-size:1.12rem;margin:26px 0 8px}
+.doc p{margin:0 0 14px}
+.doc ul{margin:0 0 16px;padding-left:1.3em}
+.doc li{margin:0 0 8px}
+.summary{margin:28px 0 0;padding:22px 24px;background:var(--surface);border:1px solid var(--line);
+  border-left:6px solid var(--saffron);border-radius:16px;box-shadow:var(--shadow)}
+.summary p:last-child{margin-bottom:0}
+.toc{margin:22px 0 0;padding:20px 24px;background:var(--surface);border:1px solid var(--line);border-radius:16px}
+.doc .toc h2{margin:0 0 10px;font-size:.85rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.toc ol{margin:0;padding-left:1.5em;columns:2 15em;column-gap:32px}
+.toc li{margin:0 0 6px;break-inside:avoid}
+.flows{display:grid;gap:14px;margin:18px 0 20px}
+.flow{padding:20px 22px;background:var(--surface);border:1px solid var(--line);border-radius:16px}
+.doc .flow h3{margin:0 0 4px}
+.flow dl{display:grid;grid-template-columns:7.2em minmax(0,1fr);gap:8px 14px;margin:12px 0 0}
+.flow dt{font-weight:650;color:var(--muted)}
+.flow dd{margin:0}
+@media (max-width:540px){.flow dl{grid-template-columns:minmax(0,1fr);gap:2px}.flow dd+dt{margin-top:8px}}
+.tag{display:inline-block;margin-left:6px;padding:2px 10px;border-radius:999px;background:var(--tag-bg);color:var(--tag-text);
+  font-size:.78rem;font-weight:700;letter-spacing:.01em;vertical-align:.12em}
+.path{font-weight:650}
+.lang-section{margin-top:72px;padding-top:4px;border-top:2px solid var(--line)}
+
+/* Footer (shared) */
+.site-footer{padding:40px 0 48px;background:var(--ink);color:#C9D0E2;font-size:.95rem}
+.site-footer ul{display:flex;flex-wrap:wrap;gap:8px 22px;margin:0 0 18px;padding:0;list-style:none}
+.site-footer a{color:#fff;overflow-wrap:anywhere}
+.site-footer p{margin:0}
+.site-footer p+p{margin-top:6px}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="pagehead">
+  <div class="wrap">
+    <nav class="topbar" aria-label="Main">
+      <a class="brand" href="index.html"><img src="icon.png" width="36" height="36" alt=""> Kordela</a>
+      <ul class="nav">
+        <li><a href="privacy-policy.html" aria-current="page">Privacy</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="doc">
+  <div class="wrap">
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective <time datetime="2026-10-21">October 21, 2026</time> · Kordela: Connect the Dots Game for iPhone and iPad · <a href="#turkce" hreflang="tr" lang="tr">Türkçe özet</a></p>
+
+    <div class="summary">
+      <p><strong>The short version.</strong> Kordela has no ads and no accounts, and it does not track you. Your progress, stars, settings and Sequins are stored on your device. To back them up, deliver your purchases and fix crashes, the game uses Google Firebase and RevenueCat with a random anonymous ID that is not linked to your name, email address, phone number or Apple Account. We never sell your data or use it for advertising. You can delete everything from <span class="path">Settings → Delete my data</span> in the game.</p>
+    </div>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ol>
+        <li><a href="#who-we-are">Who we are</a></li>
+        <li><a href="#no-account">No account needed</a></li>
+        <li><a href="#on-device">Data stored on your device</a></li>
+        <li><a href="#leaves-device">Data that leaves your device</a></li>
+        <li><a href="#payments">Purchases and payments</a></li>
+        <li><a href="#never">What we never do</a></li>
+        <li><a href="#linked">Is any of this linked to you?</a></li>
+        <li><a href="#email">When you email us</a></li>
+        <li><a href="#providers">Service providers</a></li>
+        <li><a href="#retention">How long we keep data</a></li>
+        <li><a href="#delete">Deleting your data</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#rights">Your rights</a></li>
+        <li><a href="#transfers">International transfers</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="who-we-are">1. Who we are</h2>
+    <p>Kordela: Connect the Dots Game (“Kordela” or “the game”) is developed and published by Alperen Çiftlikçi, an independent developer (“we”, “us”). We are responsible for the personal data described in this policy (in GDPR terms, the data controller). For any privacy question or request, email <a href="mailto:ciftlikcialperen@gmail.com?subject=Kordela%20Privacy">ciftlikcialperen@gmail.com</a>.</p>
+
+    <h2 id="no-account">2. No account needed</h2>
+    <p>Kordela has no sign-up and no login: you can play as soon as you open it. When the game first connects to the internet, Firebase Authentication quietly creates a random anonymous ID for your copy of the game. We never ask for your name, email address, phone number or Apple Account, and the anonymous ID is not linked to any of them.</p>
+
+    <h2 id="on-device">3. Data stored on your device</h2>
+    <p>The game stores your progress (the levels you have cleared, your stars and best times), your settings and your Sequins (the in-game currency) on your device. This copy stays on the device and is removed when you delete the game or use Delete my data. An online backup is described in the next section.</p>
+
+    <h2 id="leaves-device">4. Data that leaves your device</h2>
+    <p>The game sends a small amount of data to the services below. None of it includes your name, contact details, photos, contacts or precise location.</p>
+    <div class="flows">
+      <section class="flow" aria-labelledby="flow-id">
+        <h3 id="flow-id">Anonymous ID</h3>
+        <dl>
+          <dt>What</dt><dd>A random identifier that Firebase Authentication creates the first time the game goes online.</dd>
+          <dt>Why</dt><dd>To keep your backup, Sequins and purchases together without knowing who you are.</dd>
+          <dt>Who</dt><dd>Google (Firebase Authentication)</dd>
+        </dl>
+      </section>
+      <section class="flow" aria-labelledby="flow-backup">
+        <h3 id="flow-backup">Game backup</h3>
+        <dl>
+          <dt>What</dt><dd>Your progress (levels cleared, stars, best times and which puzzles you have already played) and your settings.</dd>
+          <dt>Why</dt><dd>To keep a backup of your game online, in step with your Sequins and purchases.</dd>
+          <dt>Who</dt><dd>Google (Cloud Firestore)</dd>
+        </dl>
+      </section>
+      <section class="flow" aria-labelledby="flow-wallet">
+        <h3 id="flow-wallet">Sequins wallet and purchase records</h3>
+        <dl>
+          <dt>What</dt><dd>Your Sequins balance, how Sequins were earned and spent (for example on hints and lamps), and for each purchase the item, the date and its App Store transaction ID.</dd>
+          <dt>Why</dt><dd>To keep your balance correct and safe from cheating, and to deliver each purchase exactly once.</dd>
+          <dt>Who</dt><dd>Google (Cloud Firestore and Cloud Functions)</dd>
+        </dl>
+      </section>
+      <section class="flow" aria-labelledby="flow-rc">
+        <h3 id="flow-rc">Purchase check</h3>
+        <dl>
+          <dt>What</dt><dd>The App Store details of your purchases (item, price, currency, date and transaction IDs) and an anonymous app user ID.</dd>
+          <dt>Why</dt><dd>To confirm that purchases are genuine, deliver them, and restore permanent items.</dd>
+          <dt>Who</dt><dd>RevenueCat</dd>
+        </dl>
+      </section>
+      <section class="flow" aria-labelledby="flow-crash">
+        <h3 id="flow-crash">Crash reports <span class="tag">On by default</span></h3>
+        <dl>
+          <dt>What</dt><dd>When the game crashes or hits a serious error: technical details such as the device model, iOS version, app version and where in the code the error happened; recent game events such as the level being played; and random installation IDs created by Firebase.</dd>
+          <dt>Why</dt><dd>To find and fix bugs.</dd>
+          <dt>Who</dt><dd>Google (Firebase Crashlytics)</dd>
+          <dt>Your choice</dt><dd>Turn crash reports off at any time in <span class="path">Settings → Privacy → Crash Reports</span>.</dd>
+        </dl>
+      </section>
+      <section class="flow" aria-labelledby="flow-check">
+        <h3 id="flow-check">Device check</h3>
+        <dl>
+          <dt>What</dt><dd>A token from Apple’s App Attest service confirming that a request comes from a genuine copy of Kordela on a real Apple device. It contains no personal information.</dd>
+          <dt>Why</dt><dd>To protect the game’s online services and your Sequins from cheating and abuse.</dd>
+          <dt>Who</dt><dd>Google (Firebase App Check), with Apple (App Attest)</dd>
+        </dl>
+      </section>
+      <section class="flow" aria-labelledby="flow-stats">
+        <h3 id="flow-stats">Game statistics <span class="tag">Optional</span></h3>
+        <dl>
+          <dt>What</dt><dd>How the game is played: levels started, finished or failed and how long they took, hints and lamps used, visits to the Shop and whether a purchase went through, plus a few settings (such as whether color-blind glyphs are on), the device type and a random app-instance ID. Google Analytics also works out your approximate location (such as country or city) from your IP address. No advertising identifiers are used.</dd>
+          <dt>Why</dt><dd>To see which levels are too hard or too easy, and to improve the game.</dd>
+          <dt>Who</dt><dd>Google (Google Analytics for Firebase)</dd>
+          <dt>Your choice</dt><dd>Nothing is sent unless you choose to share. You can change your choice at any time in <span class="path">Settings → Privacy → Share Game Statistics</span>.</dd>
+        </dl>
+      </section>
+    </div>
+    <p>When the game connects to these services, they also receive your device’s IP address, as with any internet connection. We do not use it to identify you.</p>
+
+    <h2 id="payments">5. Purchases and payments</h2>
+    <p>All payments are made through Apple’s App Store, and Apple processes them. We never see or store your card or other payment details. Apple tells us and RevenueCat which item you bought, when, and its transaction ID, so the game can deliver it. How Apple handles your data is described in <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>.</p>
+
+    <h2 id="never">6. What we never do</h2>
+    <ul>
+      <li>We don’t show ads, and the game contains no advertising SDKs.</li>
+      <li>We don’t track you across other companies’ apps or websites. The game doesn’t use Apple’s advertising identifier (IDFA), so it never asks for permission to track you.</li>
+      <li>We don’t sell your personal data, and we don’t share it for advertising.</li>
+      <li>We don’t collect your name, email address, phone number, contacts, photos or precise location.</li>
+    </ul>
+
+    <h2 id="linked">7. Is any of this linked to you?</h2>
+    <p>None of the data above is linked to your identity. Your backup, Sequins and purchase records are stored under the random anonymous ID, and crash reports and game statistics are not attached even to that ID. On its own, none of it tells us who you are.</p>
+
+    <h2 id="email">8. When you email us</h2>
+    <p>If you write to us, we receive your email address and whatever you include in your message. We use them only to answer you, and keep the conversation only as long as we need it to help you.</p>
+
+    <h2 id="providers">9. Service providers</h2>
+    <p>These companies process data for us, under their own terms and security measures:</p>
+    <ul>
+      <li><strong>Google</strong>, for Firebase: Authentication, Cloud Firestore, Cloud Functions, Crashlytics, App Check and Google Analytics for Firebase. See <a href="https://firebase.google.com/support/privacy">Privacy and Security in Firebase</a>.</li>
+      <li><strong>RevenueCat, Inc.</strong>, for checking purchases. See <a href="https://www.revenuecat.com/privacy">RevenueCat’s Privacy Policy</a>.</li>
+      <li><strong>Apple Inc.</strong>, for App Store payments and App Attest. See <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>.</li>
+    </ul>
+
+    <h2 id="retention">10. How long we keep data</h2>
+    <ul>
+      <li><strong>On your device:</strong> until you use Delete my data or delete the game.</li>
+      <li><strong>Anonymous ID, game backup, Sequins wallet and purchase records:</strong> until you delete them with Delete my data or ask us to delete them.</li>
+      <li><strong>RevenueCat’s records:</strong> until you delete your data; they are deleted along with it.</li>
+      <li><strong>Crash reports:</strong> kept by Crashlytics for 90 days.</li>
+      <li><strong>Game statistics</strong> (only if you share them): event-level data is kept for no more than 14 months; after that, only aggregated totals remain.</li>
+      <li><strong>Emails:</strong> as long as we need them to help you.</li>
+    </ul>
+    <p>Apple keeps its own records of your purchases under Apple’s privacy policy.</p>
+
+    <h2 id="delete">11. Deleting your data</h2>
+    <p><strong>In the game:</strong> open Settings and tap <span class="path">Delete my data</span>. This deletes your progress, stars, settings and Sequins, including Sequins you bought, from your device and from our servers. It also deletes your anonymous ID and has RevenueCat delete its record of your purchases. If you shared game statistics, we also ask Google Analytics to delete the statistics collected from your device. Deletion needs an internet connection and cannot be undone. Afterwards, the game starts again from level 1.</p>
+    <p><strong>By email:</strong> write to <a href="mailto:ciftlikcialperen@gmail.com?subject=Kordela%20Privacy">ciftlikcialperen@gmail.com</a>. Because Kordela has no accounts, we may need your help to find your data, for example the order ID from an App Store receipt.</p>
+    <p><strong>What remains:</strong> so that a purchase can never be delivered twice, we keep the App Store transaction IDs of past purchases with the link to your anonymous ID removed, and a note that the anonymous ID was deleted. Crash reports that were already sent expire after 90 days.</p>
+    <p>Deleting the game from your device removes only the copy on the device. The online backup stays until you use Delete my data or ask us to delete it. Permanent purchases stay with your Apple Account, so you can bring them back later with Restore Purchases.</p>
+
+    <h2 id="children">12. Children</h2>
+    <p>Kordela is suitable for everyone and is rated 4+ on the App Store, but it is not directed at children under 13. We do not knowingly collect personal data from children under 13. If you believe a child under 13 has given us personal data, contact us and we will delete it.</p>
+
+    <h2 id="rights">13. Your rights</h2>
+    <p>Wherever you live, you can email us to ask for a copy of your data, to have it corrected or deleted, or with any question about it. We will not treat you differently for using your rights. If we cannot connect a request to any data, we will tell you.</p>
+    <h3>European Economic Area, United Kingdom and Switzerland (GDPR)</h3>
+    <p>You have the right to access your personal data, to have it corrected or erased, to restrict or object to its processing, to receive it in a portable format, and to withdraw your consent at any time (this does not affect processing that happened before). You can also complain to your local data protection authority. We answer requests within one month.</p>
+    <p>We rely on these legal bases:</p>
+    <ul>
+      <li><strong>Contract:</strong> running the game, the online backup, the Sequins wallet and your purchases.</li>
+      <li><strong>Legitimate interests:</strong> crash reports and device checks, to keep the game stable and protect it from cheating and abuse, and answering your emails. You can turn crash reports off at any time.</li>
+      <li><strong>Consent:</strong> game statistics, which are sent only if you choose to share them.</li>
+    </ul>
+    <h3>California (CCPA)</h3>
+    <p>If you live in California, you have the right to know what personal information we collect, use and disclose, to have it deleted or corrected, and to opt out of its sale or sharing. We do not sell or share personal information, as California law defines those terms, and we do not collect sensitive personal information.</p>
+    <p>The game collects these categories: identifiers (the anonymous ID and random installation IDs); commercial information (records of purchases); internet or other electronic network activity (game progress, crash reports and, if you choose to share them, game statistics); and, with game statistics only, approximate location. We collect them from your device, use them for the purposes in <a href="#leaves-device">section 4</a>, and disclose them only to the service providers in <a href="#providers">section 9</a>. You, or an agent you authorize, can make a request by email. We answer within 45 days.</p>
+
+    <h2 id="transfers">14. International transfers</h2>
+    <p>Our service providers run servers in several countries, including the United States and the European Union, so your data may be processed outside the country where you live. When data from the European Economic Area, the United Kingdom or Switzerland is transferred to a country without an adequacy decision, it is protected by the safeguards in the providers’ data processing terms, such as the European Commission’s Standard Contractual Clauses.</p>
+
+    <h2 id="security">15. Security</h2>
+    <p>Data is sent over encrypted connections. Our database lets each anonymous ID read only its own data, and device checks help block requests that do not come from the genuine game. No system is perfectly secure, but we take reasonable steps to protect your data.</p>
+
+    <h2 id="changes">16. Changes to this policy</h2>
+    <p>We may update this policy when the game changes. We will post the new version on this page with a new effective date, and for significant changes we will also let you know in the game.</p>
+
+    <h2 id="contact">17. Contact</h2>
+    <p>Alperen Çiftlikçi<br><a href="mailto:ciftlikcialperen@gmail.com?subject=Kordela%20Privacy">ciftlikcialperen@gmail.com</a></p>
+
+    <section class="lang-section" id="turkce" lang="tr" aria-labelledby="turkce-title">
+      <h2 id="turkce-title">Türkçe</h2>
+      <p class="meta">Gizlilik Politikası özeti · Yürürlük tarihi: <time datetime="2026-10-21">21 Ekim 2026</time></p>
+      <p>Bu bölüm, yukarıdaki İngilizce Gizlilik Politikası’nın kısa bir özetidir. Ayrıntılar İngilizce metindedir.</p>
+      <ul>
+        <li><strong>Biz kimiz:</strong> Kordela: Connect the Dots Game’i bağımsız geliştirici Alperen Çiftlikçi geliştirir ve yayımlar; veri sorumlusu odur. İletişim: <a href="mailto:ciftlikcialperen@gmail.com?subject=Kordela%20Gizlilik">ciftlikcialperen@gmail.com</a>.</li>
+        <li><strong>Hesap yok:</strong> Kayıt ya da giriş yoktur, oyun hemen başlar. Oyun internete ilk bağlandığında Firebase rastgele, anonim bir kimlik oluşturur. Adınızı, e-posta adresinizi, telefon numaranızı ya da Apple Hesabınızı istemeyiz; anonim kimlik bunların hiçbiriyle ilişkilendirilmez.</li>
+        <li><strong>Cihazınızda saklananlar:</strong> İlerlemeniz, yıldızlarınız, ayarlarınız ve Pul bakiyeniz cihazınızda saklanır.</li>
+        <li><strong>Google Firebase:</strong> Anonim kimlik doğrulama; ilerlemenizin, ayarlarınızın ve Pul cüzdanınızın bulut yedeği; çökme raporları (Crashlytics; varsayılan olarak açıktır, <span class="path">Ayarlar → Gizlilik → Çökme Raporları</span> bölümünden kapatabilirsiniz) ve App Check cihaz doğrulaması (Apple App Attest).</li>
+        <li><strong>RevenueCat:</strong> Satın alımlarınızı anonim bir uygulama kullanıcı kimliğiyle doğrular.</li>
+        <li><strong>Oyun istatistikleri (isteğe bağlı):</strong> Yalnızca paylaşmayı seçerseniz Google Analytics for Firebase’e gönderilir. Seçiminizi <span class="path">Ayarlar → Gizlilik → Oyun İstatistiklerini Paylaş</span> bölümünden istediğiniz zaman değiştirebilirsiniz.</li>
+        <li><strong>Ödemeler:</strong> Tüm ödemeleri Apple işler; kart bilgilerinizi hiçbir zaman görmeyiz.</li>
+        <li><strong>Yapmadıklarımız:</strong> Reklam ve reklam SDK’sı yoktur. Sizi başka şirketlerin uygulamaları ve web siteleri arasında takip etmeyiz; bu yüzden oyun takip izni istemez. Verilerinizi satmayız ve reklam amacıyla paylaşmayız. Toplanan veriler kimliğinizle ilişkilendirilmez; tek bağlantı rastgele anonim kimliktir.</li>
+        <li><strong>Saklama ve silme:</strong> Verileriniz siz silene kadar saklanır; çökme raporları 90 gün sonra silinir. Oyunda <span class="path">Ayarlar → Verilerimi sil</span> ile cihazınızdaki ve sunucularımızdaki verilerinizi (satın aldığınız Pul’lar dahil) silebilirsiniz. Bu işlem geri alınamaz. Silme isteğinizi e-postayla da gönderebilirsiniz.</li>
+        <li><strong>Çocuklar:</strong> Oyun herkese uygundur (4+), ancak 13 yaşından küçük çocuklara yönelik değildir ve onlardan bilerek kişisel veri toplamayız.</li>
+        <li><strong>Haklarınız:</strong> 6698 sayılı Kişisel Verilerin Korunması Kanunu’nun (KVKK) 11. maddesi, GDPR ve CCPA kapsamındaki haklarınızı (verilerinize erişme, düzeltme, silme, itiraz etme gibi) e-postayla başvurarak kullanabilirsiniz.</li>
+        <li><strong>Yurt dışına aktarım:</strong> Hizmet sağlayıcılarımızın sunucuları ABD ve AB dahil farklı ülkelerdedir; verileriniz bu ülkelerde işlenebilir.</li>
+        <li><strong>Değişiklikler:</strong> Politika değişirse bu sayfayı ve yürürlük tarihini güncelleriz; önemli değişiklikleri oyunda da duyururuz.</li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a></li>
+        <li><a href="mailto:ciftlikcialperen@gmail.com">ciftlikcialperen@gmail.com</a></li>
+      </ul>
+    </nav>
+    <p>© 2026 Alperen Çiftlikçi. Kordela is an independent game.</p>
+    <p>Apple, iPhone, iPad and App Store are trademarks of Apple Inc.</p>
+  </div>
+</footer>
+</body>
+</html>

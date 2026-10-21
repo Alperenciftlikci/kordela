@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support · Kordela</title>
+<meta name="description" content="Help for Kordela: Connect the Dots Game. How lamps and hints work, restoring purchases, missing purchases, deleting your data, supported devices and languages.">
+<link rel="canonical" href="https://alperenciftlikci.github.io/kordela/support.html">
+<meta name="theme-color" content="#485789">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<style>
+:root{
+  --map-hi:#6073B3;--map-lo:#485789;--navy:#0F1730;--ink:#0A1022;
+  --saffron:#EBA415;--gold:#F1D27A;
+  --bg:#F4F5FA;--surface:#FFFFFF;--text:#0F1730;--muted:#4A5372;--line:rgba(15,23,48,.12);
+  --link:#3B4A86;
+  --shadow:0 1px 2px rgba(15,23,48,.05),0 10px 30px rgba(15,23,48,.08);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0B1124;--surface:#141D38;--text:#EEF1F8;--muted:#AEB6CC;--line:rgba(255,255,255,.12);
+    --link:#F1D27A;--shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.3)}
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);
+  font:400 1.0625rem/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+img,svg{display:block;max-width:100%;height:auto}
+a{color:var(--link);text-underline-offset:.18em;overflow-wrap:anywhere}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--saffron);outline-offset:3px;border-radius:6px}
+h1,h2,h3{margin:0;line-height:1.2;letter-spacing:-.015em}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:12px;top:-80px;z-index:10;padding:10px 16px;border-radius:10px;
+  background:var(--ink);color:#fff;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+
+/* Top bar (shared) */
+.pagehead{background:linear-gradient(180deg,var(--map-hi) 0%,var(--map-lo) 100%);color:#fff}
+.topbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;padding:16px 0}
+.brand{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:750;font-size:1.25rem;letter-spacing:-.01em}
+.brand img{width:36px;height:36px;border-radius:9px}
+.nav{display:flex;gap:4px;margin:0;padding:0;list-style:none}
+.nav a{display:inline-block;padding:8px 12px;border-radius:999px;color:#fff;font-weight:600;text-decoration:none}
+.nav a:hover{background:rgba(10,16,34,.28)}
+.nav a[aria-current="page"]{background:rgba(10,16,34,.34)}
+@media (max-width:380px){.wrap{padding:0 16px}.brand{gap:8px;font-size:1.15rem}.brand img{width:32px;height:32px;border-radius:8px}.nav a{padding:8px 10px}}
+@media (max-width:340px){.brand{font-size:1.05rem}.nav a{padding:6px 8px;font-size:.95rem}}
+
+/* Document */
+.doc{padding:44px 0 72px}
+.doc .wrap{max-width:800px}
+.doc h1{font-size:clamp(2rem,5vw,2.8rem);letter-spacing:-.025em}
+.intro{margin:12px 0 0;color:var(--muted);font-size:1.1rem}
+.doc h2{font-size:1.4rem;margin:52px 0 12px;scroll-margin-top:20px}
+.doc h3{font-size:1.12rem;margin:30px 0 8px;scroll-margin-top:20px}
+.doc p{margin:0 0 14px}
+.doc ul,.doc ol{margin:0 0 16px;padding-left:1.3em}
+.doc li{margin:0 0 8px}
+.contact{margin:28px 0 0;padding:26px;border-radius:20px;background:var(--navy);color:#E6EAF4;box-shadow:var(--shadow)}
+.doc .contact h2{margin:0 0 6px;color:#fff;font-size:1.3rem}
+.contact p{margin:0}
+.mail-btn{display:inline-block;margin:14px 0;padding:13px 24px;border-radius:999px;background:var(--saffron);color:var(--navy);
+  font-weight:700;text-decoration:none}
+.mail-btn:hover{text-decoration:underline}
+.contact .hint{font-size:.95rem;color:#C9D0E2}
+.toc{margin:22px 0 0;padding:20px 24px;background:var(--surface);border:1px solid var(--line);border-radius:16px}
+.doc .toc h2{margin:0 0 10px;font-size:.85rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.toc ul{margin:0;padding-left:1.2em}
+.toc li{margin:0 0 6px}
+.path{font-weight:650}
+.lang-section{margin-top:72px;padding-top:4px;border-top:2px solid var(--line)}
+.more{margin-top:48px;color:var(--muted)}
+
+/* Footer (shared) */
+.site-footer{padding:40px 0 48px;background:var(--ink);color:#C9D0E2;font-size:.95rem}
+.site-footer ul{display:flex;flex-wrap:wrap;gap:8px 22px;margin:0 0 18px;padding:0;list-style:none}
+.site-footer a{color:#fff;overflow-wrap:anywhere}
+.site-footer p{margin:0}
+.site-footer p+p{margin-top:6px}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="pagehead">
+  <div class="wrap">
+    <nav class="topbar" aria-label="Main">
+      <a class="brand" href="index.html"><img src="icon.png" width="36" height="36" alt=""> Kordela</a>
+      <ul class="nav">
+        <li><a href="privacy-policy.html">Privacy</a></li>
+        <li><a href="support.html" aria-current="page">Support</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="doc">
+  <div class="wrap">
+    <h1>Support</h1>
+    <p class="intro">Answers to common questions about Kordela: Connect the Dots Game. Can’t find yours? Write to us and a real person will reply. <a href="#turkce" hreflang="tr" lang="tr">Türkçe</a></p>
+
+    <section class="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Email us</h2>
+      <p>Questions, bugs, purchase problems or ideas: we read every message.</p>
+      <a class="mail-btn" href="mailto:ciftlikcialperen@gmail.com?subject=Kordela%20Support&amp;body=Device%20model%3A%20%0AiOS%20version%3A%20%0ALevel%20%28if%20any%29%3A%20%0AWhat%20happened%3A%20%0A">ciftlikcialperen@gmail.com</a>
+      <p class="hint">We usually reply within a couple of days. It helps to include your device model, your iOS version and, if it’s about a level, the level number.</p>
+    </section>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <h2 id="toc-title">Common questions</h2>
+      <ul>
+        <li><a href="#lamps">How do lamps work?</a></li>
+        <li><a href="#hints">How do hints work?</a></li>
+        <li><a href="#restore">How do I restore my purchases?</a></li>
+        <li><a href="#missing-purchase">I bought something, but it didn’t arrive</a></li>
+        <li><a href="#delete-data">How do I delete my data?</a></li>
+        <li><a href="#devices">Which devices and languages are supported?</a></li>
+        <li><a href="#turkce" hreflang="tr" lang="tr">Türkçe sorular</a></li>
+      </ul>
+    </nav>
+
+    <h2 id="lamps">How do lamps work?</h2>
+    <p>You have three lamps. A lamp goes out when time runs out on a level you haven’t cleared yet, or if you leave such a level after tapping Start. Wrong moves, hints, undo and pausing never cost a lamp.</p>
+    <ul>
+      <li>Lamps relight one at a time, one every 30 minutes, so all three are back within 90 minutes.</li>
+      <li>Replays are free: levels you have already cleared are always open and never use a lamp. It’s a good time to go back for three stars.</li>
+      <li>When time runs out, your next try brings a new board of the same difficulty.</li>
+      <li>Out of lamps and don’t want to wait? You can also relight lamps with Sequins.</li>
+    </ul>
+
+    <h2 id="hints">How do hints work?</h2>
+    <p>Hints open from level 11. During a level, tap Hint and choose one:</p>
+    <ul>
+      <li><strong>Chalk Mark</strong> shows one sure move.</li>
+      <li><strong>Dede’s Stitch</strong> draws one color’s whole line.</li>
+    </ul>
+    <p>Each hint costs Sequins. The price is shown before you confirm, and if a hint can’t be prepared, no Sequins are spent. Each board allows only a few hints of each kind, and using a hint never costs a lamp.</p>
+    <p>You earn Sequins as you play: a chest every 10 levels, a bonus for each world you finish and rewards for star milestones. You can get more in the Shop.</p>
+
+    <h2 id="restore">How do I restore my purchases?</h2>
+    <p>Open the Shop and tap <span class="path">Restore Purchases</span>. Make sure you are signed in to the App Store with the same Apple Account you used to buy.</p>
+    <p>Restoring brings back permanent items, such as World Cards, the Season 1 Card and the Dome Key. Sequins themselves can’t be restored: they are a consumable currency, so once they have been added to your balance, the App Store has nothing to restore.</p>
+
+    <h2 id="missing-purchase">I bought something, but it didn’t arrive</h2>
+    <p>Most purchases arrive within a few seconds, but sometimes the App Store takes a little longer to confirm a payment. Try these steps:</p>
+    <ol>
+      <li>Stay online and keep Kordela open for a minute or two.</li>
+      <li>Close the game completely and open it again.</li>
+      <li>For permanent items, open the Shop and tap <span class="path">Restore Purchases</span>.</li>
+      <li>If the purchase needs approval through Ask to Buy, it arrives once it has been approved.</li>
+    </ol>
+    <p>Still missing? Email us with the date of the purchase and its order ID. You’ll find the order ID in the receipt email from Apple or at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. We’ll look into it and help.</p>
+    <p>Refunds are handled by Apple. You can request one at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+
+    <h2 id="delete-data">How do I delete my data?</h2>
+    <p>Open Settings in the game and tap <span class="path">Delete my data</span>. This erases your progress, stars, settings and Sequins, including Sequins you bought, from your device and from our servers. It needs an internet connection and can’t be undone. Afterwards, the game starts again from level 1.</p>
+    <p>Deleting the app removes only the copy on your device, not the online backup. You can also ask us by email to delete your data. Permanent purchases stay with your Apple Account, so you can bring them back later with Restore Purchases. The <a href="privacy-policy.html#delete">Privacy Policy</a> has the details.</p>
+
+    <h2 id="devices">Which devices and languages are supported?</h2>
+    <p>Kordela runs on iPhone with iOS 26 or later and on iPad with iPadOS 26 or later. It isn’t available on Mac or Apple Vision Pro.</p>
+    <p>The game is available in 39 languages and follows your device’s language. To choose a different language just for Kordela, open Settings in the game and tap <span class="path">Language</span>. It takes you to Kordela’s page in the iOS Settings app, where you can pick a language. If you don’t see a language option there, first add the language under <span class="path">Settings → General → Language &amp; Region</span>.</p>
+
+    <section class="lang-section" id="turkce" lang="tr" aria-labelledby="turkce-title">
+      <h2 id="turkce-title">Türkçe</h2>
+      <p>Sık sorulan soruların kısa cevapları. Cevabını bulamazsan bize yaz: <a href="mailto:ciftlikcialperen@gmail.com?subject=Kordela%20Destek&amp;body=Cihaz%20modeli%3A%20%0AiOS%20s%C3%BCr%C3%BCm%C3%BC%3A%20%0AB%C3%B6l%C3%BCm%20%28varsa%29%3A%20%0ANe%20oldu%3A%20%0A">ciftlikcialperen@gmail.com</a></p>
+
+      <h3 id="tr-lambalar">Lambalar nasıl çalışır?</h3>
+      <p>Üç lamban var. Henüz geçmediğin bir bölümde süre dolarsa ya da Başla’ya dokunduktan sonra bölümden çıkarsan bir lamba söner. Yanlış hamle, ipucu, geri alma ve duraklatma lamba harcamaz. Lambalar sırayla, 30 dakikada bir yeniden yanar; üçü de en geç 90 dakikada dolar. Geçtiğin bölümleri tekrar oynamak lamba harcamaz. Beklemek istemezsen lambaları Pul ile de yakabilirsin.</p>
+
+      <h3 id="tr-ipuclari">İpuçları nasıl çalışır?</h3>
+      <p>İpuçları 11. bölümden itibaren açılır. <strong>Tebeşir İzi</strong> tek bir kesin hamle gösterir; <strong>Dedenin Dikişi</strong> bir rengin yolunu baştan sona çizer. İkisi de Pul harcar; fiyat sen onaylamadan önce görünür ve ipucu hazırlanamazsa Pul harcanmaz. Pul’u oynayarak kazanırsın (her 10 bölümde bir sandık, her diyarın sonunda ödül, yıldız hedefleri); Dükkân’dan da alabilirsin.</p>
+
+      <h3 id="tr-geri-yukleme">Satın alımlarımı nasıl geri yüklerim?</h3>
+      <p>Dükkân’ı aç ve <span class="path">Satın Alımları Geri Yükle</span>’ye dokun. App Store’da, satın alırken kullandığın Apple Hesabı ile oturum açmış olmalısın. Diyar Kartları, Sezon 1 Kartı ve Kubbe Anahtarı gibi kalıcı ürünler geri gelir. Pul geri yüklenemez.</p>
+
+      <h3 id="tr-gelmeyen">Satın aldığım ürün gelmedi</h3>
+      <p>İnternete bağlı kal ve oyunu bir iki dakika açık bırak; sonra oyunu tamamen kapatıp yeniden aç. Kalıcı ürünler için Dükkân’da <span class="path">Satın Alımları Geri Yükle</span>’yi dene. Satın Alma İsteği (Ask to Buy) onay bekliyorsa ürün onaydan sonra gelir. Hâlâ gelmediyse satın alma tarihini ve sipariş numarasını (Order ID) bize gönder; numarayı Apple’ın makbuz e-postasında ya da <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> adresinde bulabilirsin. İadeleri Apple yapar: <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+
+      <h3 id="tr-silme">Verilerimi nasıl silerim?</h3>
+      <p>Oyunda <span class="path">Ayarlar → Verilerimi sil</span>’e dokun. İlerlemen, yıldızların, ayarların ve Pul’ların (satın aldıkların dahil) cihazından ve sunucularımızdan silinir. İnternet bağlantısı gerekir ve işlem geri alınamaz; ardından oyun 1. bölümden başlar. Uygulamayı silmek yalnızca cihazdaki kopyayı siler, çevrimiçi yedeği silmez. Silme isteğini e-postayla da gönderebilirsin.</p>
+
+      <h3 id="tr-cihazlar">Hangi cihazlar ve diller destekleniyor?</h3>
+      <p>Kordela, iOS 26 veya üstü yüklü iPhone’larda ve iPadOS 26 veya üstü yüklü iPad’lerde çalışır; Mac ve Apple Vision Pro’da yoktur. Oyun 39 dilde oynanabilir ve cihazının dilini kullanır. Yalnızca Kordela’nın dilini değiştirmek için oyunda <span class="path">Ayarlar → Dil</span>’e dokun; iOS Ayarlar uygulamasındaki Kordela sayfası açılır.</p>
+    </section>
+
+    <p class="more"><a href="privacy-policy.html">Privacy Policy</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a></li>
+        <li><a href="mailto:ciftlikcialperen@gmail.com">ciftlikcialperen@gmail.com</a></li>
+      </ul>
+    </nav>
+    <p>© 2026 Alperen Çiftlikçi. Kordela is an independent game.</p>
+    <p>Apple, iPhone, iPad and App Store are trademarks of Apple Inc.</p>
+  </div>
+</footer>
+</body>
+</html>
