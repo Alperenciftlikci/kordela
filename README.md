@@ -50,4 +50,4 @@ statistics (Google Analytics); RevenueCat for purchases. If the app starts
 collecting something new, update `privacy-policy.html` and its effective date,
 along with the App Store privacy labels.
 
-Contact: ciftlikcialperen@gmail.com
+Contact: kordela.app@gmail.com
